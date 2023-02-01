@@ -1,0 +1,16 @@
+[
+{
+  "modid": "iceandFrost",
+  "name": "Ice and Frost",
+  "description": "Mods with Ice and Frost",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Diamons"],
+  "credits": "https://github.com/DiamonsGold",
+  "logoFile": "iceandfrost.jpg",
+  "screenshots": [],
+  "dependencies": []
+}
+]
