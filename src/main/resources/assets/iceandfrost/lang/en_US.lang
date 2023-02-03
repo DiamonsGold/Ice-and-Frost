@@ -1,5 +1,6 @@
 item.ItemFrozenRottenFlesh.name=Frozen Rotten Flesh
+item.ItemFrostPickaxe.name=Frost Pickaxe
 
 tile.BlockFrozenCobblestone.name=Frozen Cobblestone
 
-itemGroup.tabIceAndFire=Ice and Fire
+itemGroup.tabIceAndFrost=Ice and Frost
