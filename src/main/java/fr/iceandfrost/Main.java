@@ -4,6 +4,8 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 
 import fr.iceandfrost.item.ItemFrostPickaxe;
+import fr.iceandfrost.item.ItemFrostSword;
+import fr.iceandfrost.item.ItemFrostAxe;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -26,17 +28,19 @@ public class Main
     public static final String VERSION = "1.0";
 
     public static Item itemFrozenRottenFlesh;
-
     public static Block blockFrozenCobblestone;
 
     public static Item itemFrostPickaxe;
+    public static Item itemFrostSword;
+    public static Item itemFrostAxe;
+
 
     public static final Item.ToolMaterial frostToolMaterial = EnumHelper.addToolMaterial(
             "frostToolMaterial",
             4,
             2031,
             10.0f,
-            2.5f,
+            4.0f,
             14);
 
     @EventHandler
@@ -46,24 +50,42 @@ public class Main
                 .setUnlocalizedName("ItemFrozenRottenFlesh")
                 .setTextureName("iceandfrost:frozen_rotten_flesh")
                 .setCreativeTab(tabIceAndFrost);
+
         blockFrozenCobblestone = new BlockFrozenCobblestone(Material.rock)
                 .setBlockName("BlockFrozenCobblestone")
                 .setBlockTextureName("iceandfrost:frozen_cobblestone")
                 .setCreativeTab(tabIceAndFrost);
+
         itemFrostPickaxe = new ItemFrostPickaxe(frostToolMaterial)
                 .setUnlocalizedName("ItemFrostPickaxe")
                 .setTextureName("iceandfrost:frost_pickaxe")
+                .setCreativeTab(tabIceAndFrost);
+        itemFrostSword = new ItemFrostSword(frostToolMaterial)
+                .setUnlocalizedName("ItemFrostSword")
+                .setTextureName("iceandfrost:frost_sword")
+                .setCreativeTab(tabIceAndFrost);
+        itemFrostAxe = new ItemFrostAxe(frostToolMaterial)
+                .setUnlocalizedName("ItemFrostAxe")
+                .setTextureName("iceandfrost:frost_axe")
                 .setCreativeTab(tabIceAndFrost);
 
         GameRegistry.registerItem(
                 itemFrozenRottenFlesh,
                 itemFrozenRottenFlesh.getUnlocalizedName().substring(5));
+
         GameRegistry.registerBlock(
                 blockFrozenCobblestone,
                 blockFrozenCobblestone.getUnlocalizedName().substring(5));
+
         GameRegistry.registerItem(
                 itemFrostPickaxe,
                 itemFrostPickaxe.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(
+                itemFrostSword,
+                itemFrostSword.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(
+                itemFrostAxe,
+                itemFrostAxe.getUnlocalizedName().substring(5));
 
         GameRegistry.addSmelting(
                 itemFrozenRottenFlesh,

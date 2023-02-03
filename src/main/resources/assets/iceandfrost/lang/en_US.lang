@@ -1,5 +1,7 @@
 item.ItemFrozenRottenFlesh.name=Frozen Rotten Flesh
 item.ItemFrostPickaxe.name=Frost Pickaxe
+item.ItemFrostSword.name=Frost Sword
+item.ItemFrostAxe.name=Frost Axe
 
 tile.BlockFrozenCobblestone.name=Frozen Cobblestone
 
