@@ -6,6 +6,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import fr.iceandfrost.item.ItemFrostPickaxe;
 import fr.iceandfrost.item.ItemFrostSword;
 import fr.iceandfrost.item.ItemFrostAxe;
+import fr.iceandfrost.item.ItemFrostHammer;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -33,7 +34,7 @@ public class Main
     public static Item itemFrostPickaxe;
     public static Item itemFrostSword;
     public static Item itemFrostAxe;
-
+    public static Item itemFrostHammer;
 
     public static final Item.ToolMaterial frostToolMaterial = EnumHelper.addToolMaterial(
             "frostToolMaterial",
@@ -68,6 +69,10 @@ public class Main
                 .setUnlocalizedName("ItemFrostAxe")
                 .setTextureName("iceandfrost:frost_axe")
                 .setCreativeTab(tabIceAndFrost);
+        itemFrostHammer = new ItemFrostHammer(frostToolMaterial)
+                .setUnlocalizedName("ItemFrostHammer")
+                .setTextureName("iceandfrost:frost_hammer")
+                .setCreativeTab(tabIceAndFrost);
 
         GameRegistry.registerItem(
                 itemFrozenRottenFlesh,
@@ -86,6 +91,9 @@ public class Main
         GameRegistry.registerItem(
                 itemFrostAxe,
                 itemFrostAxe.getUnlocalizedName().substring(5));
+        GameRegistry.registerItem(
+                itemFrostHammer,
+                itemFrostHammer.getUnlocalizedName().substring(5));
 
         GameRegistry.addSmelting(
                 itemFrozenRottenFlesh,
